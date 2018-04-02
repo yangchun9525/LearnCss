@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网站例子</title>
+    <style>
+        * { /*为了方便,就这样清空默认样式了*/
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    </style>
+</head>
+    <body>
+        <div style="background: #333333;height: 50px;text-align: center;">
+            <div style="width: 1000px;background: red;height: 50px;margin: auto">
+                <div style="width: 200px;height: 50px;background: #6effb1;float: left"></div>
+                <div style="width: 200px;height: 50px;background: #6effb1;float: right"></div>
+                <div style="text-align: center;margin: auto;height: 50px;background: #b3d4fc;line-height: 50px;">123</div>
+            </div>
+        </div>
+        <div style="background: #333333;height: 250px;width: 1000px;margin: 30px auto">
+            <div style="background: red;height: 50px;"></div>
+            <div style="height: 200px">
+                <div style="width: 250px;background: #b3d4fc;height: 100%;float: left"></div>
+                <div style="background: #0000ff;height: 100%;">3456</div>
+            </div>
+        </div>
+
+        <div style="height: 200px;width: 1000px;margin: 30px auto">
+            <div style="height: 100%">
+                <div style="width: 250px;background: #b3d4fc;float:left;height: 100%;display: grid; grid-template-columns: 1fr 1fr 1fr;">
+                    <div style="background: #b3d4fc"></div>
+                    <div style="background: #112233"></div>
+                    <div style="background: #562141"></div>
+                    <div style="background: #6effb1"></div>
+                    <div style="background: #b3d4fc"></div>
+                    <div style="background: #6effb1"></div>
+                </div>
+
+                <div style="height: 100%;margin-left:20px;float:left;width: 730px;background: red">
+                    <ul style="display: flex;height: 100%;justify-content: space-between;">
+                        <li style="background: #333333;height: 100%;width: 30%"></li>
+                        <li style="background: #b3d4fc;height: 100%;width: 30%"></li>
+                        <li style="background: #0000ff;height: 100%;width: 30%"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns: 1fr 1fr 1fr;height: 400px;width: 1000px;margin: 30px auto;">
+            <div style="background: #562141;grid-row-start: 1;grid-row-end: 3;"></div>
+            <div style="background: #b3d4fc;grid-row-start: 1;grid-row-end: 3;"></div>
+            <div style="background: #333333;grid-row-start: 1;grid-row-end: 2;"></div>
+            <div style="background: #8545e0;grid-row-start: 2;grid-row-end: 3;"></div>
+            <div style="background: #b3d4fc;grid-row-start: 3;grid-row-end: 5;"></div>
+            <div style="background: #eeff2b;grid-row-start: 3;grid-row-end: 5;"></div>
+            <!--<div style="background: #111111;"></div>-->
+            <!--<div style="background: red;"></div>-->
+        </div>
+    </body>
+</html>

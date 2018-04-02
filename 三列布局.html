@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #parent{
+            min-width: 310px; /*100+10+200,防止宽度不够,子元素换行*/
+        }
+        #left {
+            margin-right: 10px;  /*#left和#center间隔*/
+            float: left;
+            width: 100px;
+            height: 50px;
+            background-color: #f00;
+        }
+        #center{
+            float: left;
+            width: 200px;
+            height: 50px;
+            background-color: #eeff2b;
+        }
+        #right {
+            margin-left: 320px;  /*等于#left和#center的宽度之和加上间隔,多出来的就是#right和#center的间隔*/
+            height: 50px;
+            background-color: #0f0;
+        }
+        /*------------------------------------------------------------------*/
+        #parent2{
+            margin-top: 30px;
+            min-width: 320px; /*100+10+200+20,防止宽度不够,子元素换行*/
+        }
+        #left2 {
+            margin-right: 10px; /*间隔*/
+            float: left;
+            width: 100px;
+            height: 50px;
+            background-color: #f00;
+        }
+        #center2{
+            margin-right: 10px; /*在此定义和#right的间隔*/
+            float: left;
+            width: 200px;
+            height: 50px;
+            background-color: #eeff2b;
+        }
+        #right2 {
+            /*float: left;*/
+            overflow: hidden;  /*触发bfc*/
+            height: 50px;
+            background-color: #0f0;
+        }
+        /*------------------------------------------------------------------*/
+        #parent3 {
+            margin-top: 30px;
+            height: 50px;
+            display: grid;
+            grid-template-columns: 100px 200px auto; /*设置3列,固定第一第二列的宽度,第三列auto或者1fr*/
+        }
+        #left3 {
+            margin-right: 10px;  /*间距*/
+            background-color: #f00;
+        }
+        #center3 {
+            margin-right: 10px;  /*间距*/
+            background-color: #eeff2b;
+        }
+        #right3 {
+            background-color: #0f0;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="left">左列定宽. </div>
+        <div id="center">中间定宽</div>
+        <div id="right">右列自适应.两列定宽,一列自适应</div>
+    </div>
+
+    <div id="parent2">
+        <div id="left2">左列定宽</div>
+        <div id="center2">中间定宽</div>
+        <div id="right2">右列自适应</div>
+    </div>
+
+    <div style="margin-top: 30px">
+       使用flex实现，具体查看flex布局
+    </div>
+
+    <div id="parent3">
+        <div id="left3">左列定宽,使用grid实现</div>
+        <div id="center3">中间定宽</div>
+        <div id="right3">右列自适应</div>
+    </div>
+</body>
+</html>

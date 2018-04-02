@@ -1,0 +1,66 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!--水平居中-->
+        1.父设置为text-align: center;只有子的宽度小于父的宽度才有效
+        <div style=" text-align: center;">
+            <div style="background: #555555;">
+                123
+            </div>
+        </div>
+        2.将子设置为定宽,并且将margin设置为auto
+        <div>
+            <div style="width: 100px;background: #b3d4fc;margin: 0 auto;text-align: center;">
+                <p style="background: #555555;margin: 0px">123</p>
+            </div>
+        </div>
+        3.父设置为text-align: center;将子设置为display: inline-block;,有点类似于第一种
+        <div style="text-align: center">
+            <div style="display: inline-block;background: #b3d4fc;">
+                <p style="background: #555555;margin: 0px">
+                    123
+                </p>
+            </div>
+        </div>
+        4.使用绝对定位实现
+        <div style="
+                height: 200px;
+                width: 200px;  /*定宽*/
+                position: relative;  /*父相*/
+                background-color: #f00;">
+            <div style="
+                    position: absolute;  /*子绝*/
+                    left: 50%;  /*父元素宽度一半,这里等同于left:100px*/
+                    transform: translateX(-50%);  /*自身宽度一半,等同于margin-left: -50px;*/
+                    width: 100px;  /*定宽*/
+                    height: 100px;
+                    background-color: #00ff00;">
+                <p style="background: #555555;margin: 0px">
+                    123
+                </p>
+            </div>
+        </div>
+        5.使用flex
+        <div style=" display: flex;justify-content: center;background: #b3d4fc;">
+            <div >
+                <p style="background: #555555">
+                    123
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

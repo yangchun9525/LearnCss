@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrapper1 {
+            display: grid;
+        }
+
+        /*其他情况这样*/
+        .wrapper2 {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 1px;
+            grid-row-gap: 1px;
+            background-color: black;
+        }
+        /*响应式网格布局，当屏幕宽度大于500时这样*/
+        @media screen and (min-width: 500px) {
+            .wrapper2 {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+        /*响应式网格布局，当屏幕宽度大于800时这样*/
+        @media screen and (min-width: 800px) {
+            .wrapper2 {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        }
+
+        .wrapper3 {
+            grid-column-gap: 1px;
+            grid-row-gap: 1px;
+            margin-top: 20px;
+            display: grid;
+            background-color: black;
+            /*列*/
+            grid-template-columns: 3fr 1fr 1fr;
+            /*行*/
+            grid-template-rows: 1fr 3fr;
+        }
+
+        .letter {
+            background-color: #0069b3;
+            font-size: 30px;
+            color: white;
+        }
+
+        .letter1 {
+            background-color: #0069b3;
+            font-size: 30px;
+            color: white;
+            /*表示占据从第一条网格线开始，到第四条网格线结束*/
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .letter2 {
+            background-color: #0069b3;
+            font-size: 30px;
+            color: white;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        .letter3 {
+            background-color: #0069b3;
+            font-size: 30px;
+            color: white;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .letter4 {
+            background-color: #0069b3;
+            font-size: 30px;
+            color: white;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        .letter5 {
+            background-color: #0069b3;
+            font-size: 30px;
+            color: white;
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper1">
+        <div class="letter">
+            A
+        </div>
+        <div class="letter">
+            B
+        </div>
+    </div>
+
+    <div class="wrapper2">
+        <div class="letter">
+            A
+        </div>
+        <div class="letter">
+            B
+        </div>
+    </div>
+
+    <div class='wrapper2'>
+        <div class='letter'>
+            A
+        </div>
+        <div class='letter'>
+            B
+        </div>
+        <div class='letter'>
+            C
+        </div>
+        <div class='letter'>
+            D
+        </div>
+    </div>
+
+    <div class='wrapper3'>
+        <div class='letter'>
+            A
+        </div>
+        <div class='letter'>
+            B
+        </div>
+        <div class='letter'>
+            C
+        </div>
+        <div class='letter'>
+            D
+        </div>
+    </div>
+
+    <div class='wrapper3'>
+        <div class='letter1'>
+            A
+        </div>
+        <div class='letter2'>
+            B
+        </div>
+        <div class='letter'>
+            C
+        </div>
+        <div class='letter'>
+            D
+        </div>
+    </div>
+
+    <div class='wrapper3'>
+        <div class='letter3'>
+            A
+        </div>
+        <div class='letter'>
+            B
+        </div>
+        <div class='letter4'>
+            C
+        </div>
+        <div class='letter5'>
+            D
+        </div>
+        <div class='letter'>
+            E
+        </div>
+        <div class='letter'>
+            F
+        </div>
+    </div>
+</body>
+</html>

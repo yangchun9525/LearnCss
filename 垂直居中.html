@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        1.设置行高与高度相同，单行文本/行内元素/行内块级元素
+        <div style=" height: 150px;
+                        background: #b3d4fc;
+                        line-height: 150px;  /*与height等值*/">
+            <p style="background: red">123</p>
+        </div>
+        2.多行文本/行内元素/行内块级元素
+        <div style=" height: 150px;
+                        background: #b3d4fc;
+                        line-height: 50px;  /*元素在页面呈现为3行,则line-height的值为height/3*/">
+            <div style="background: red">123</div>
+            <div style="background: #222222">123</div>
+            <div style="background: #6222">123</div>
+        </div>
+        3.图片.需要添加font-size: 0
+        <div style=" height: 150px;
+                        font-size: 0;
+                        background: #b3d4fc;
+                        line-height: 150px;  /*元素在页面呈现为3行,则line-height的值为height/3*/">
+            <img src="favicon.ico" style="background: red;vertical-align: middle;">
+        </div>
+        4.单个块级元素。使用绝对定位实现:类似于水平居中的相对定位实现
+        <div style=" height: 150px;
+                        position: relative;
+                        background: #b3d4fc;">
+            <div style="background: red;
+                            transform: translateY(-50%);  /*自身高度一半,这里等同于margin-top:-25px;*/
+                            height: 50px;
+                            position: absolute;  /*子绝*/
+                            top: 50%;  /*父元素高度一半,这里等同于top:75px;*/">
+                123
+            </div>
+        </div>
+        5.使用flex，参考flex布局
+    </body>
+</html>
