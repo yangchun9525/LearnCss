@@ -93,8 +93,52 @@ type相关
         :read-write     与:read-only相反，默认为:read-write
         ::before和::after 这两个主要用来给元素的前面或后面插入内容，这两个常和"content"配合使用，使用的场景最多的就是清除浮动。
  
+兼容性
+---
+
+     谷歌内核：-webkit；火狐内核：-moz ；IE内核：-ms；Opera内核：-o 。
+     
 变形与动画
 -----    
         
          transform:rotate(20deg); 顺时针旋转20度  
+         transform:skew(45deg);   逆时针旋转45度  
+         transform: scale(0.5,0.8);    长变为0.5，高变为0.8
+         opacity: .5                透明度为0.5
+         transform: translate(50px,100px);  x轴移动50px，y轴移动100px
+         transform-origin: top right;    修改原点，然后进行变换，比如rotate，skew
+         transition-property:指定过渡或动态模拟的CSS属性
+         transition-duration:指定完成过渡所需的时间
+         transition-timing-function:指定过渡函数
+         transition-delay:指定开始出现的延迟时间
+         
+         @Keyframes changecolor{
+          0%{
+             background: red;
+           }
+           20%{
+             background:blue;
+           }
+          }
+          //此处调用上面定义的动画，动画名，动画执行时间，过度函数，延迟时间
+          div:hover {
+            animation: changecolor 20s ease-out .2s;
+          }
+          //上面的animation 其实是下面这些的简写
+          animation-name:changecolor;
+          animation-duration: 10s;
+          animation-timing-function: ease;
+          animation-delay: 1s;
+          animation-iteration-count:infinite;
+          animation-direction                   动画播放方向
+          animation-play-state                  动画的播放状态
+          
+ css3布局：
+ 
+        columns：<column-width> || <column-count>  列宽和列数。
+        column-gap: normal || <length>              设置列与列之间的间距，normal默认为1rem，length可为具体值
+        //主要是用来定义列与列之间的边框宽度、边框样式和边框颜色。
+        column-rule:<column-rule-width>|<column-rule-style>|<column-rule-color>
+        //定义一个分列元素中的子元素能跨列多少
+        column-span: none | all
 屏幕适配 https://segmentfault.com/a/1190000004524243#articleHeader4
