@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=0.5,user-scalable=no">
+    <title>Title</title>
+    <style type="text/css">
+        /**
+       1rem = 浏览器默认字体font-size  16px
+       修改html font-size即可改变
+        */
+        html {
+            font-size: 17px;
+        }
+
+        .box {
+            width: 10rem;
+            height: 10rem;
+            background-color: red;
+        }
+
+        .text {
+            color: white;
+            font-size: 1rem;
+        }
+
+        @media screen and (max-width: 320px) {
+            html {
+                font-size: 40px;
+            }
+        }
+
+        @media screen and (max-width: 360px) and (min-width: 321px) {
+            html {
+                font-size: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <p class="text">
+        hello rem
+    </p>
+    <script type="text/javascript">
+        //获取设备宽度
+        let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+        console.log(htmlWidth);
+        //获取html高度
+        let htmlDom = document.getElementsByTagName('html')[0];
+        htmlDom.style.fontSize = htmlWidth / 10 + 'px';
+    </script>
+</div>
+</body>
+</html>

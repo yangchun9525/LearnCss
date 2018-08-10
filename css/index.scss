@@ -1,0 +1,109 @@
+@function px2rem($px) {
+    $rem: 37.5px;
+    @return ($px / $rem) + rem;
+}
+$test_width: 200px;
+
+html {
+    background-color: #f8f8f8;
+    //width: $test_width;
+}
+
+.header {
+    height: px2rem(40px);
+    width: 100%;
+    background-color: red;
+    .header-content {
+        padding-left: px2rem(32px);
+        @media (min-width: 769px) {
+            padding-left: px2rem(125px);
+        }
+    }
+
+    .header-item {
+        list-style-type: none;
+        float: left;
+        color: #ffcdce;
+        font-size: px2rem(16px);
+        margin-right: px2rem(20px);
+        line-height: px2rem(40px);
+
+        &:nth-child(2) {
+            color: #fff;
+            font-size: px2rem(17px);
+        }
+    }
+}
+
+.banner-content {
+    position: relative;
+    .banner {
+        display: block;
+        width: 100%;
+        height: px2rem(190px);
+    }
+
+    .banner-title {
+        position: absolute;
+        left: px2rem(15px);
+        bottom: px2rem(15px);
+        font-size: px2rem(16px);
+        color: #fff;
+    }
+}
+
+.news-content {
+    .news-item {
+        width: 100%;
+        //横向出现滚动条，加这个使其不出现滚动条
+        box-sizing: border-box;
+        height: px2rem(90px);
+        padding-left: px2rem(15px);
+        padding-right: px2rem(15px);
+    }
+    .item-inner {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        border-bottom: px2rem(1px) solid #e5e5e5;
+    }
+    .news-img {
+        float: left;
+        display: block;
+        margin-top: px2rem(10px);
+        width: px2rem(95px);
+        height: px2rem(70px);
+        margin-right: px2rem(15px);
+    }
+    .news-title {
+        color: #404040;
+        font-size: px2rem(17px);
+        line-height: px2rem(20px);
+        margin-top: px2rem(16px);
+    }
+    .time {
+        position: absolute;
+        left: px2rem(110px);
+        bottom: px2rem(17px);
+        color: #888;
+        font-size: px2rem(12px);
+    }
+    .number {
+        position: absolute;
+        color: #888;
+        font-size: px2rem(12px);
+        right: px2rem(4px);
+        bottom: px2rem(17px);
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: px2rem(21px);
+            height: px2rem(20px);
+            background-size: contain;
+            top: px2rem(0px);
+            left: px2rem(-25px);
+            background-image: url("../img/read.png");
+        }
+    }
+}
