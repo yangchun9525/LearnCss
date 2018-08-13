@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="92542164-26c0-4687-999f-3efa0cae43ce" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -55,7 +56,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="566">
-                <caret line="140" column="50" lean-forward="false" selection-start-line="140" selection-start-column="50" selection-end-line="140" selection-end-column="50" />
+                <caret line="145" column="60" lean-forward="false" selection-start-line="145" selection-start-column="60" selection-end-line="145" selection-end-column="60" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -303,7 +304,7 @@
       <workItem from="1533691201271" duration="3315000" />
       <workItem from="1533777678250" duration="10278000" />
       <workItem from="1533867977824" duration="7793000" />
-      <workItem from="1534123834952" duration="3672000" />
+      <workItem from="1534123834952" duration="5085000" />
     </task>
     <task id="LOCAL-00001" summary="增加浮动和inline-block的代码">
       <created>1532509891144</created>
@@ -354,11 +355,18 @@
       <option name="project" value="LOCAL" />
       <updated>1534145516423</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="增加vue屏幕适配的链接">
+      <created>1534145523140</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1534145523140</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116012000" />
+    <option name="totallyTimeSpent" value="117425000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -703,7 +711,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="566">
-            <caret line="140" column="50" lean-forward="false" selection-start-line="140" selection-start-column="50" selection-end-line="140" selection-end-column="50" />
+            <caret line="145" column="60" lean-forward="false" selection-start-line="145" selection-start-column="60" selection-end-line="145" selection-end-column="60" />
             <folding />
           </first_editor>
           <second_editor>
