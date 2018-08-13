@@ -142,3 +142,4 @@ type相关
         //定义一个分列元素中的子元素能跨列多少
         column-span: none | all
 屏幕适配 https://segmentfault.com/a/1190000004524243#articleHeader4
+https://www.w3cplus.com/mobile/vw-layout-in-vue.html
