@@ -4,7 +4,10 @@ html {
 .header {
   height: 1.0666666667rem;
   width: 100%;
-  background-color: red; }
+  background-color: #80B373; }
+  @media (min-width: 769px) {
+    .header {
+      height: 0.4rem; } }
   .header .header-content {
     padding-left: 0.8533333333rem; }
     @media (min-width: 769px) {
@@ -13,13 +16,21 @@ html {
   .header .header-item {
     list-style-type: none;
     float: left;
-    color: #ffcdce;
-    font-size: 0.4266666667rem;
+    color: #D1DFB7;
+    font-size: 0.3466666667rem;
     margin-right: 0.5333333333rem;
     line-height: 1.0666666667rem; }
     .header .header-item:nth-child(2) {
       color: #fff;
       font-size: 0.4533333333rem; }
+      @media (min-width: 769px) {
+        .header .header-item:nth-child(2) {
+          font-size: 0.16rem; } }
+    @media (min-width: 769px) {
+      .header .header-item {
+        font-size: 0.16rem;
+        margin-right: 0.2666666667rem;
+        line-height: 0.4rem; } }
 
 .banner-content {
   position: relative; }
